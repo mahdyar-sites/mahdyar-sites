@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>کلینیک دندانپزشکی مهدیار</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f6fbff;
+            color: #222;
+            line-height: 1.9;
+        }
+
+        /* Header */
+
+        header {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #087cf0;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 22px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #087cf0;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 600px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #e8f7ff, #ffffff);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            color: #087cf0;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #087cf0;
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .tooth {
+            font-size: 190px;
+        }
+
+        /* General sections */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #087cf0;
+            font-size: 32px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* Services */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .card p {
+            color: #777;
+        }
+
+        /* About */
+
+        .about {
+            background: #eaf7ff;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .about-text {
+            max-width: 650px;
+        }
+
+        .about-text h2 {
+            color: #087cf0;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 80px;
+            text-align: center;
+        }
+
+        /* Doctor */
+
+        .doctor {
+            background: white;
+        }
+
+        .doctor-box {
+            max-width: 800px;
+            margin: auto;
+            background: #f5fbff;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .doctor-image {
+            font-size: 100px;
+            margin-bottom: 15px;
+        }
+
+        .doctor-box h3 {
+            font-size: 25px;
+            color: #087cf0;
+        }
+
+        /* Advantages */
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .advantage {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .advantage span {
+            font-size: 45px;
+        }
+
+        .advantage h3 {
+            margin: 10px 0;
+        }
+
+        /* Working hours */
+
+        .hours {
+            background: #eaf7ff;
+        }
+
+        .hours-box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+        }
+
+        .day {
+            display: flex;
+            justify-content: space-between;
+            padding: 13px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .day:last-child {
+            border-bottom: none;
+        }
+
+        /* Reviews */
+
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .review {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .stars {
+            color: #f5b400;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Appointment */
+
+        .appointment {
+            background: linear-gradient(135deg, #087cf0, #00a8ff);
+            color: white;
+        }
+
+        .appointment h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .form {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .form input,
+        .form select,
+        .form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .form button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            background: #087cf0;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        /* Footer */
+
+        footer {
+            background: #102a43;
+            color: white;
+            padding: 40px 8%;
+            text-align: center;
+        }
+
+        footer h2 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #dbeafe;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 35px;
+            }
+
+            .tooth {
+                font-size: 110px;
+                margin-top: 30px;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .advantages {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+    <div class="logo">
+        🦷 کلینیک مهدیار
+    </div>
+
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#doctor">دندانپزشک</a>
+        <a href="#appointment">رزرو نوبت</a>
+        <a href="#contact">تماس</a>
+    </nav>
+
+</header>
+
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <h2>
+            لبخندی زیبا،
+            اعتمادبه‌نفسی بیشتر
+        </h2>
+
+        <p>
+            ارائه خدمات تخصصی دندانپزشکی
+            با محیطی مدرن، آرام و حرفه‌ای.
+        </p>
+
+        <a href="#appointment" class="btn">
+            📅 رزرو نوبت
+        </a>
+
+    </div>
+
+    <div class="tooth">
+        🦷
+    </div>
+
+</section>
+
+
+<!-- Services -->
+
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>خدمات دندانپزشکی</h2>
+
+        <p>
+            خدمات مختلف برای سلامت و زیبایی لبخند شما
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="card-icon">🦷</div>
+
+            <h3>معاینه دندان</h3>
+
+            <p>
+                بررسی وضعیت دندان‌ها و سلامت دهان
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">✨</div>
+
+            <h3>جرم‌گیری</h3>
+
+            <p>
+                پاکسازی دندان‌ها و حذف جرم
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">😁</div>
+
+            <h3>زیبایی دندان</h3>
+
+            <p>
+                خدمات زیبایی و طراحی لبخند
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">🔧</div>
+
+            <h3>ترمیم دندان</h3>
+
+            <p>
+                ترمیم و بازسازی دندان‌های آسیب‌دیده
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">🪥</div>
+
+            <h3>بهداشت دهان</h3>
+
+            <p>
+                آموزش مراقبت صحیح از دندان‌ها
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">😁</div>
+
+            <h3>لبخند زیبا</h3>
+
+            <p>
+                بررسی و طراحی لبخند متناسب با شما
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">🔍</div>
+
+            <h3>تشخیص</h3>
+
+            <p>
+                بررسی مشکلات و ارائه برنامه درمانی
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">💎</div>
+
+            <h3>خدمات ویژه</h3>
+
+            <p>
+                ارائه خدمات تخصصی دندانپزشکی
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- About -->
+
+<section class="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <h2>چرا کلینیک مهدیار؟</h2>
+
+            <p>
+                هدف ما ارائه خدمات دندانپزشکی
+                با کیفیت بالا و ایجاد تجربه‌ای
+                آرام و مطمئن برای مراجعه‌کنندگان است.
+            </p>
+
+            <br>
+
+            <p>
+                در این مجموعه تلاش می‌شود
+                سلامت، زیبایی و رضایت مراجعه‌کننده
+                در اولویت قرار گیرد.
+            </p>
+
+        </div>
+
+        <div class="about-box">
+            🦷
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Doctor -->
+
+<section class="doctor" id="doctor">
+
+    <div class="section-title">
+
+        <h2>دندانپزشک</h2>
+
+        <p>
+            معرفی پزشک مجموعه
+        </p>
+
+    </div>
+
+
+    <div class="doctor-box">
+
+        <div class="doctor-image">
+            👨‍⚕️
+        </div>
+
+        <h3>
+            دکتر مهدیار
+        </h3>
+
+        <p>
+            دندانپزشک
+        </p>
+
+        <br>
+
+        <p>
+            ارائه خدمات دندانپزشکی،
+            زیبایی و مراقبت از سلامت دهان و دندان.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Advantages -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>مزایای ما</h2>
+
+    </div>
+
+
+    <div class="advantages">
+
+        <div class="advantage">
+
+            <span>🏥</span>
+
+            <h3>
+                محیط مدرن
+            </h3>
+
+            <p>
+                فضای آرام و مناسب مراجعه‌کنندگان
+            </p>
+
+        </div>
+
+
+        <div class="advantage">
+
+            <span>⭐</span>
+
+            <h3>
+                کیفیت خدمات
+            </h3>
+
+            <p>
+                توجه به کیفیت و رضایت مراجعه‌کنندگان
+            </p>
+
+        </div>
+
+
+        <div class="advantage">
+
+            <span>⏰</span>
+
+            <h3>
+                نوبت‌دهی منظم
+            </h3>
+
+            <p>
+                امکان درخواست نوبت به صورت آنلاین
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Working Hours -->
+
+<section class="hours">
+
+    <div class="section-title">
+
+        <h2>
+            ساعات کاری
+        </h2>
+
+    </div>
+
+
+    <div class="hours-box">
+
+        <div class="day">
+            <span>شنبه</span>
+            <span>۹ تا ۲۰</span>
+        </div>
+
+        <div class="day">
+            <span>یکشنبه</span>
+            <span>۹ تا ۲۰</span>
+        </div>
+
+        <div class="day">
+            <span>دوشنبه</span>
+            <span>۹ تا ۲۰</span>
+        </div>
+
+        <div class="day">
+            <span>سه‌شنبه</span>
+            <span>۹ تا ۲۰</span>
+        </div>
+
+        <div class="day">
+            <span>چهارشنبه</span>
+            <span>۹ تا ۲۰</span>
+        </div>
+
+        <div class="day">
+            <span>پنجشنبه</span>
+            <span>۹ تا ۱۸</span>
+        </div>
+
+        <div class="day">
+            <span>جمعه</span>
+            <span>تعطیل</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Reviews -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            نظر مراجعه‌کنندگان
+        </h2>
+
+    </div>
+
+
+    <div class="reviews">
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                محیط کلینیک خیلی آرام و مرتب بود.
+            </p>
+
+            <br>
+
+            <strong>
+                — علی
+            </strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                برخورد بسیار خوب و تجربه خوبی داشتم.
+            </p>
+
+            <br>
+
+            <strong>
+                — محمد
+            </strong>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                از خدمات کلینیک راضی بودم.
+            </p>
+
+            <br>
+
+            <strong>
+                — سارا
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Appointment -->
+
+<section class="appointment" id="appointment">
+
+    <h2>
+        رزرو نوبت
+    </h2>
+
+
+    <div class="form">
+
+        <input
+            type="text"
+            placeholder="نام و نام خانوادگی"
+        >
+
+        <input
+            type="tel"
+            placeholder="شماره تلفن"
+        >
+
+        <select>
+
+            <option>
+                انتخاب نوع خدمات
+            </option>
+
+            <option>
+                معاینه
+            </option>
+
+            <option>
+                جرم‌گیری
+            </option>
+
+            <option>
+                زیبایی
+            </option>
+
+            <option>
+                ترمیم
+            </option>
+
+        </select>
+
+
+        <input
+            type="date"
+        >
+
+
+        <textarea
+            placeholder="توضیحات شما..."
+        ></textarea>
+
+
+        <button onclick="alert('درخواست شما ثبت شد!')">
+            ارسال درخواست
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            تماس با ما
+        </h2>
+
+        <p>
+            برای دریافت اطلاعات بیشتر با ما در ارتباط باشید.
+        </p>
+
+    </div>
+
+
+    <div class="contact-info">
+
+        <div class="contact-item">
+            📍 خیابان الهیه
+        </div>
+
+        <div class="contact-item">
+            📞 ۰۹۱۲۱۲۳۴۵۶۷
+        </div>
+
+        <div class="contact-item">
+            📧 info@mahdyardent.ir
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <h2>
+        🦷 کلینیک دندانپزشکی مهدیار
+    </h2>
+
+    <p>
+        لبخند شما، افتخار ماست.
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 تمامی حقوق محفوظ است.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
